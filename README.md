@@ -57,9 +57,11 @@ GOPRO
 
 采用[混合精度](https://www.mindspore.cn/tutorials/zh-CN/master/advanced/mixed_precision.html)的训练方法，使用支持单精度和半精度数据来提高深度学习神经网络的训练速度，同时保持单精度训练所能达到的网络精度。混合精度训练提高计算速度、减少内存使用的同时，支持在特定硬件上训练更大的模型或实现更大批次的训练。
 
-## 数据增强
+## RGB Shuffle 数据增强
 
-提出并实现了一种和去模糊这种低层视觉任务相容的数据增强方法 PairRandomRGBShuffle。
+提出并实现了一种适合去模糊这种低层视觉任务的数据增强方法 PairRandomRGBShuffle，将 RGB 通道的数据随机排列，生成新的训练样本。下图第一行两张图为原始训练数据中的模糊和锐利图像，后面两行分别为 RGB shuffle 增强后生成的样本。
+
+![rgb_shuffle](assets/images/1_two_rgb_shuffled_stacked_resized.png "RGB Shuffle 数据增强")
 
 # [环境要求](#目录)
 
